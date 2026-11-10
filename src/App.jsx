@@ -11,10 +11,14 @@ function szyfruj(znak){
   const przesuniecie = 3;
   const pozycja = alfabet.indexOf(znak);
 
-  const PozycjaPoPrzesunieciu = pozycja +przesuniecie;
+  const wynik = (pozycja + przesuniecie) % alfabet.length;
 
-  return alfabet[PozycjaPoPrzesunieciu];
+  return alfabet[wynik];
 }
+return <>
+      {szyfruj("A")}
+</>
+ 
 }
 
 export default App
