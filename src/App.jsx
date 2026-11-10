@@ -33,9 +33,7 @@ return <>
         max={25}
         value={przesuniecie}
         onChange={(e) => {
-          const wartosc = Number(e.target.value);
-          console.log(typeof wartosc)
-          console.log(wartosc)
+          const wartosc = Number(e.target.value)
           setPrzesuniecie(wartosc);
         }} />
         <p>Przesunięcie o {przesuniecie}:</p>
