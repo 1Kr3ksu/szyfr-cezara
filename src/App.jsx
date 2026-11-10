@@ -11,6 +11,10 @@ function szyfruj(znak){
   const przesuniecie = 3;
   const pozycja = alfabet.indexOf(znak);
 
+  if (pozycja === -1) {
+    return znak; // Znak nie znajduje się w alfabecie, zwracamy go bez zmian
+  }
+
   const wynik = (pozycja + przesuniecie) % alfabet.length;
 
   return alfabet[wynik];
