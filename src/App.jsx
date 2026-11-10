@@ -5,13 +5,16 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+const alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-  return (
-    <>
-    
-    </>
-  )
+function szyfruj(znak){
+  const przesuniecie = 3;
+  const pozycja = alfabet.indexOf(znak);
+
+  const PozycjaPoPrzesunieciu = pozycja +przesuniecie;
+
+  return alfabet[PozycjaPoPrzesunieciu];
+}
 }
 
 export default App
