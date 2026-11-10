@@ -18,18 +18,27 @@ function szyfruj(znak, przesuniecie){
 }
 
 function App() {
-  const [tekst, setTekst] = useState("PIEROGI");
-  const [przesuniecie, setPrzesuniecie] = useState(3);
+  const [tekst, setTekst] = useState('PIEROGI');
+  const [przesuniecie, setPrzesuniecie] = useState("3");
 
   const zaszyfrowanyTekst = tekst.split("").map((znak) => szyfruj(znak, przesuniecie)).join("");
+
   
 return <>
       <input type="text" value={tekst}
         onChange={ (e) => setTekst(e.target.value) }
       />
-      <input type="range" min={1} max={25} value={przesuniecie}
-        onChange={ (e) => setPrzesuniecie(e.target.value) }/>
-
+     <input type="range"
+        min={1}
+        max={25}
+        value={przesuniecie}
+        onChange={(e) => {
+          const wartosc = Number(e.target.value);
+          console.log(typeof wartosc)
+          console.log(wartosc)
+          setPrzesuniecie(wartosc);
+        }} />
+        <p>Przesunięcie o {przesuniecie}:</p>
         <p>{zaszyfrowanyTekst}</p>
 </>
 }
