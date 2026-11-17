@@ -20,6 +20,12 @@
   border: 2px solid green;
 }
 
+.okienko.animowane {
+  border: 3px solid orange;
+  background-color: #fff3cd;
+  box-shadow: 0 0 8px orange;
+}
+
 .pasekLiter {
   transition: transform 0.5s ease;
 }
